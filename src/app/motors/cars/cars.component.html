@@ -1,0 +1,105 @@
+<div class="card">
+  <form class="row g-3 needs-validation" [formGroup]="cadastroForm">
+
+    <div class="header">
+      <span class="titulo">
+        <h2>FearFactory Motors</h2>
+      </span>
+
+
+
+      <div class="button">
+        <button type="button" class="btn btn-secondary" (click)="limpar()">Limpar</button>
+        <button type="button" class="btn btn-primary" (click)="editar()" *ngIf="edit">Editar</button>
+        <button type="button" class="btn btn-primary" (click)="cadastro()" *ngIf="!edit">Cadastrar</button>
+      </div>
+    </div>
+
+    <div class="row form">
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Placa do carro</label>
+        <input formControlName="placa" name="placa" type="text" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Chassi</label>
+        <input formControlName="chassi" name="chassi" type="text" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Renavam</label>
+        <input formControlName="renavam" name="renavam" type="text" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Modelo</label>
+        <input formControlName="modelo" name="modelo" type="text" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Marca</label>
+        <input formControlName="marca" name="marca" type="text" class="form-control" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Ano</label>
+        <input formControlName="ano" name="ano" type="text" class="form-control" required>
+      </div>
+    </div>
+
+
+  </form>
+
+  <div class="input-group pesquisa">
+    <div class="turma">
+      <input type="text" class="form-control input_pesquisa" placeholder="Pesquisar" [(ngModel)]="car">
+      <div class="input-group-btn">
+        <button class="btn-default btn_pesquisa" type="submit" (click)="buscar(car)">
+          <i class="bi bi-search icone_pesquisa"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="card">
+
+  <table class="tabela">
+
+    <thead class="cabeca_tabela">
+
+      <th>ID</th>
+      <th>Placa</th>
+      <th>Chassi</th>
+      <th>Renavam</th>
+      <th>Modelo</th>
+      <th>Marca</th>
+      <th>Ano</th>
+      <th>Cadastrado em</th>
+      <th>Alterado em</th>
+      <th>Ações</th>
+
+    </thead>
+
+    <tbody class="corpo_tabela">
+      <tr class="linha_tabela" *ngFor="let car of lista">
+        <td>{{car.id}}</td>
+        <td>{{car.placa}}</td>
+        <td>{{car.chassi}}</td>
+        <td>{{car.renavam}}</td>
+        <td>{{car.modelo}}</td>
+        <td>{{car.marca}}</td>
+        <td>{{car.ano}}</td>
+        <td>{{car.createdAt}}</td>
+        <td>{{car.updatedAt}}</td>
+        <td>
+          <button class="btn btn_acoes" (click)="aoEditar(car)"><i class="bi bi-pencil-square"></i></button>
+          <button class="btn btn_acoes" (click)="apagar(car)"><i class="bi bi-x-square"></i></button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

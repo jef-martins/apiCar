@@ -1,0 +1,134 @@
+h2{
+  color: #FEF2DA;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:#527F7C;
+  padding: 16px 0;
+  align-items: center;
+}
+
+
+
+
+.pesquisa{
+  background-color: #527F7C;
+}
+
+.turma{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+}
+
+.input_pesquisa{
+  width: 320px;
+  margin: 16px 0 0;
+  height: 40px;
+}
+
+.btn_pesquisa{
+  background-color: #FEF2DA;
+  margin: 0 16px;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  width: 80px;
+}
+
+.icone_pesquisa{
+  color: #527F7C;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 32px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  margin: 0 32px;
+  height: max-content;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #FEF2DA;
+  border: none;
+  width: 120px;
+}
+
+.btn-primary:hover{
+  background-color: rgb(247, 186, 74);
+}
+
+.btn-primary {
+  background-color: #F27F3D;
+}
+
+.btn-secondary {
+  background-color:#FEF2DA;
+  color: #527F7C;
+}
+
+.btn-secondary:hover {
+  background-color:#dbd4c5;
+}
+input{
+  border: 1px solid #527F7C;
+}
+
+.form {
+  padding: 16px;
+  margin: auto;
+  background-color:#e4e4e4;
+  color: #527F7C;
+}
+
+.form-control{
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.form-label {
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.tabela {
+  margin: auto;
+  width: 100%;
+}
+
+
+.btn_acoes{
+  border-radius: 8px;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
+  color: #527F7C;
+}
+
+thead {
+  background-color: #527F7C;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #FEF2DA;
+  text-align: center;
+}
+
+tbody{
+  background-color: #e4e4e4;
+  text-align: center;
+  color: #527F7C;
+}
